@@ -1,6 +1,8 @@
+"""-------------numpy-----------"""
 #%% numpy
 
 import numpy as np
+from numpy.core.fromnumeric import ravel
 
 array = np.array([1,2,3,4,5,6,7,8,9,10,11,12,13,45,15])
 
@@ -71,4 +73,64 @@ print(c.sum(axis=1))
 print(np.sqrt(c))
 print(np.square(c))
 
+# %% indexing and slicing
+import numpy as np
+array = np.array([1,2,3,4,5,6,7]) # vector dimension=1
+
+print(array[0])
+print(array[0:4])
+print(array[0:-2])
+print(array[:-2])
+print(array[::-2])
+print(array[::3])
+print(array[1:5:2])
+
+reverse_array=array[::-1]
+print(reverse_array)
+print("---------------------------------------")
+
+array1=np.array([[1,2,3,4,5],[4,5,6,7,8]])
+print(array1)
+print(array1[1,1])
+
+print(array1[:,1])
+
+print(array1[1,1:4])
+
+
+# %% # shape manipulation
+print("---------------------------------------")
+
+array = np.array([[1,2,3],[4,5,6],[7,8,9]])
+#flatten
+print(array)
+a=array.ravel()
+array2=a.reshape(3,3)
+print(a)
+print(array2)
+arrayT=array2.T
+print(arrayT)
+
+
+print(a)
+a.resize((3,3))
+print(a)
+
+
+# %%stacking arrays
+
+array1=np.array([[1,2],[3,4]])
+array2=np.array([[-1,-2],[-3,-4]])
+
+print("array 1 :",array1,"\n array2 : ",array2)
+
+#vertical
+array3=np.vstack((array1,array2))
+print(array3)
+#horizontal
+array4=np.hstack((array1,array2))
+print(array4)
+
 # %%
+
+"""-----------pandas------------"""
