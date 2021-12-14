@@ -131,6 +131,24 @@ print(array3)
 array4=np.hstack((array1,array2))
 print(array4)
 
+
+#convert and copy
+
+liste = [1,2,3,4]
+array = np.array(liste)
+liste2=list(array)
+
+a =np.array([1,2,3]) #memory
+b=a
+c=a
+b[0]=5
+print(a)
+
+d=np.array([1,2,3])
+e=d.copy()
+f=d.copy()
+
+
 # %%
 
 """-----------pandas------------"""
