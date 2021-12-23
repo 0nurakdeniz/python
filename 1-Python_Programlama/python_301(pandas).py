@@ -9,5 +9,19 @@ dictionary ={"NAME" : ["ali","veli","kenan","hilal","onur","uğur"],
 #print(dictionary)
 
 dataFrame1 = pd.DataFrame(dictionary)
+#print(dataFrame1)
 
-print(dataFrame1)
+head = dataFrame1.head()
+#print(head)
+
+tail = dataFrame1.tail()
+#print(tail)
+
+#pandas basic method
+
+print(dataFrame1.columns)
+print(dataFrame1.info())
+
+print(dataFrame1.dtypes)
+
+print('\n\n',dataFrame1.describe())
